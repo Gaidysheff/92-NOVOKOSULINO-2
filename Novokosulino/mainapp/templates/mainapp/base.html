@@ -11,6 +11,17 @@
       href="{% static 'mainapp/img/H2.ico' %}"
       type="image/x-icon"
     />
+    <!-- Custom fonts for template including Charts-->
+    <link
+      href="{% static 'mainapp/vendor/fontawesome-free/css/all.min.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Custom styles for this template-->
+    <link
+      href="{% static 'mainapp/css/sb-admin-2.min.css' %}"
+      rel="stylesheet"
+    />
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
@@ -82,7 +93,7 @@
                 <li>
                   <a
                     class="dropdown-item text-success"
-                    href="{% url 'under_construction' %}"
+                    href="{% url 'charts' %}"
                     >Графики</a
                   >
                 </li>
@@ -146,4 +157,27 @@
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"
   ></script>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="{% static 'mainapp/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'mainapp/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="{% static 'mainapp/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="{% static 'mainapp/js/sb-admin-2.js' %}"></script>
+
+  <!-- Page level plugins -->
+  <script src="{% static 'mainapp/vendor/chart.js/Chart.min.js' %}"></script>
+
+  <!-- PIE CHARTS -->
+
+  <script src="{% static 'mainapp/js/charts/chart-pie-demo.js' %}"></script>
+  <script src="{% static 'mainapp/js/charts/chart-pie-demo2.js' %}"></script>
+  <script src="{% static 'mainapp/js/charts/chart-pie-demo3.js' %}"></script>
+  <script src="{% static 'mainapp/js/charts/chart-pie-demo4.js' %}"></script>
+  <script src="{% static 'mainapp/js/charts/chart-pie-demo5.js' %}"></script>
+  <script src="{% static 'mainapp/js/charts/chart-pie-demo6.js' %}"></script>
+  <script src="{% static 'mainapp/js/charts/chart-pie-demo7.js' %}"></script>
 </html>
