@@ -7,3 +7,12 @@
   width: 100%;
   height: auto;
 }
+
+.box_img {
+  height: 50px;
+}
+
+.box_img img {
+  height: 100%;
+  /* width: auto; */
+}
