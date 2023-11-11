@@ -8,6 +8,10 @@ def index(request):
     return render(request, "mainapp/index.html", {'menu': menu, 'title': 'Главная страница'})
 
 
+def management(request):
+    return render(request, "mainapp/management.html", {'menu': menu, 'title': 'Правление ТСН'})
+
+
 def tables(request):
     return render(request, "mainapp/tables.html", {'menu': menu, 'title': 'Таблицы'})
 
