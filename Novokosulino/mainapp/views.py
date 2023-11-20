@@ -1,11 +1,17 @@
 from django.shortcuts import render
+from newsapp.models import Post
 
 
 menu = ['на Главную страницу', 'Графики', 'Таблицы']
 
 
 def index(request):
-    return render(request, "mainapp/index.html", {'menu': menu, 'title': 'Главная страница'})
+    posts = Post.objects.all()
+    context = {
+        'posts': posts,
+        'title': 'Новости',
+    }
+    return render(request, "mainapp/index.html", context)
 
 
 def management(request):

@@ -1,0 +1,35 @@
+{% extends 'mainapp/base.html' %} {% block content %}
+
+<!-- Section-->
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <center>
+        <div class="card mb-3" style="max-width: 800px">
+          <div class="row g-0">
+            <div class="h-25">
+              <img
+                src="{{ post.picture.url }}"
+                class="img-fluid rounded-start"
+                alt="post photo"
+              />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ post.title }}</h5>
+              <div class="card-text" align="justify">
+                {% autoescape off %} {{ post.text|linebreaks }}
+                {%endautoescape%}
+              </div>
+              <p class="card-text" align="end">
+                <small class="text-muted"
+                  ><i>дата создания: {{ post.dateCreation }}</i></small
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </center>
+    </div>
+  </div>
+</section>
+{% endblock content %}

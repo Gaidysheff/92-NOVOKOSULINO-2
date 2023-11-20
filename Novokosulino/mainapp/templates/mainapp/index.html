@@ -6,19 +6,24 @@
   Рады приветствовать Вас на сайте ТСН "Новокосулино-2"
 </div>
 
-<img
-  src="{% static 'mainapp/img/front_image_banner-framed.png' %}"
-  alt="front_image of Novokosulino-2"
-  style="width: 100%"
-/>
+<center>
+  <img
+    src="{% static 'mainapp/img/front_image_banner-framed.png' %}"
+    alt="front_image of Novokosulino-2"
+    style="width: 100%"
+  />
 
-<div class="container-lg">
-  <div
-    class="fs-1 text-center my-5 fst-italic"
-    style="background-color: red; color: white"
-  >
-    !!! В данный момент сайт находится в стадии разработки !!!
+  <div class="container-lg">
+    <div
+      class="fs-1 my-5 fst-italic"
+      style="background-color: red; color: white"
+    >
+      !!! В данный момент сайт находится в стадии разработки !!!
+    </div>
+
+    <h2>Новости посёлка</h2>
+    {% include "newsapp/index.html" %}
   </div>
-</div>
+</center>
 
 {% endblock content %}
