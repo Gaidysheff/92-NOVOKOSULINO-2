@@ -1,0 +1,50 @@
+{% extends "mainapp/base.html" %} {% load static %} {% block content %}
+
+<title>{{title}}</title>
+<div class="container">
+  {% for file in all_files %}
+  <a href="{{ file.file.url }}">{{ file.file.name }}</a>
+  <br />
+  {% endfor %}
+
+  <div class="row mt-5">
+    <div class="col-12 col-md-8 col-lg-6 mx-auto">
+      <div class="card p-4 shadow-lg">
+        <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >Email address</label
+            >
+            <input
+              type="text"
+              name="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+            <div id="emailHelp" class="form-text">
+              We'll never share your email with anyone else.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="formFileMultiple" class="form-label"
+              >Multiple files input example</label
+            >
+            <input
+              class="form-control"
+              type="file"
+              name="file"
+              id="formFileMultiple"
+              multiple
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
