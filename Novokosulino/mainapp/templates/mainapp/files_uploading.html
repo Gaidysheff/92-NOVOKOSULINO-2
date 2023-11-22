@@ -2,19 +2,14 @@
 
 <title>{{title}}</title>
 <div class="container">
-  {% for file in all_files %}
-  <a href="{{ file.file.url }}">{{ file.file.name }}</a>
-  <br />
-  {% endfor %}
-
-  <div class="row mt-5">
+  <div class="row my-5">
     <div class="col-12 col-md-8 col-lg-6 mx-auto">
       <div class="card p-4 shadow-lg">
         <form method="POST" enctype="multipart/form-data">
           {% csrf_token %}
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label"
-              >Email address</label
+              >Заголовок / Краткое описание</label
             >
             <input
               type="text"
@@ -24,12 +19,12 @@
               aria-describedby="emailHelp"
             />
             <div id="emailHelp" class="form-text">
-              We'll never share your email with anyone else.
+              (Не обязательно)
             </div>
           </div>
-          <div class="mb-3">
+          <div class="mb-4">
             <label for="formFileMultiple" class="form-label"
-              >Multiple files input example</label
+              >Файл</label
             >
             <input
               class="form-control"
@@ -40,10 +35,31 @@
             />
           </div>
 
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary">Загрузить</button>
         </form>
       </div>
     </div>
+  </div>
+  <div class="row g-2 g-lg-4 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+    {% for file in all_files %}
+    <div class="col mb-2">
+      <div class="card h-100" style="min-height: 200px">
+        <a class="h-100" href="{{ file.file.url }}">
+          <img
+            class="card-img-top"
+            style="max-height: 200px"
+            src="{{ file.file.url }}"
+            alt="image for news"
+          />
+        </a>
+        <div class="card-body px-4 py-0">
+          <div class="text-center">
+            <p class="fw-bolder mb-3">{{ file.text }}</з>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
   </div>
 </div>
 

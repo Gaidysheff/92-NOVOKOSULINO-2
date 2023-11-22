@@ -4,6 +4,7 @@ from django.conf import settings
 from newsapp.models import Post
 from mainapp.models import LoadedFiles
 
+
 menu = ['на Главную страницу', 'Графики', 'Таблицы']
 
 
@@ -40,7 +41,8 @@ def file_loading(request):
     all_files = LoadedFiles.objects.all()
 
     context = {
-        'all_files': all_files
+        'all_files': all_files,
+        'title': 'Загрузка файлов'
     }
 
     if request.POST:
