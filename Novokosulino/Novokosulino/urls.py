@@ -12,6 +12,7 @@ urlpatterns = [
     path('members/', include('django.contrib.auth.urls')),
     path('members/', include('members.urls')),
     path('docu/', include('docuapp.urls')),
+    path('upload/', include('loadapp.urls')),
     re_path(r'^download/(?P<path>.*)$', serve,
             {'document_root': settings.MEDIA_ROOT}),
 ]

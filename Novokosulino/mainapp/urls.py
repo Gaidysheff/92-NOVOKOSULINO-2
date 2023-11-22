@@ -9,7 +9,7 @@ urlpatterns = [
     path('tables/', tables, name='tables'),
     path('charts/', charts, name='charts'),
     path('management/', management, name='management'),
-    path('uploading/', file_loading, name='uploading'),
+    # path('uploading/', file_loading, name='uploading'),
     path('under_construction/', under_construction, name='under_construction'),
 ]
 
