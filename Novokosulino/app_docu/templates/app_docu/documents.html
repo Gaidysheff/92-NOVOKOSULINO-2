@@ -1,0 +1,19 @@
+{% extends "app_core/base.html" %} {% load static %} {% block content %}
+
+<title>{{title}}</title>
+
+<div class="container">
+  <div class="row my-5">
+    <div class="col-12 col-md-8 col-lg-6 mx-auto">
+      {% for post in file %}
+      <h2>{{post.title}}</h2>
+      <img class="card-img-top" src="{{ post.icon.url }}" alt="..." />
+      <a href="{{post.file_docu.url}}" download="{{post.file_docu.url}}"
+        >Загрузить</a
+      >
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

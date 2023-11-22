@@ -7,12 +7,12 @@ from django.views.static import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('mainapp.urls')),
-    path('news/', include('newsapp.urls')),
+    path('', include('app_core.urls')),
+    path('news/', include('app_news.urls')),
     path('members/', include('django.contrib.auth.urls')),
     path('members/', include('members.urls')),
-    path('docu/', include('docuapp.urls')),
-    path('upload/', include('loadapp.urls')),
+    path('docu/', include('app_docu.urls')),
+    path('upload/', include('app_load.urls')),
     re_path(r'^download/(?P<path>.*)$', serve,
             {'document_root': settings.MEDIA_ROOT}),
 ]

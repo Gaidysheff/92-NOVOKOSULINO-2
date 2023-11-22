@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% load static %}
+
+    <link
+      rel="shortcut icon"
+      href="{% static 'app_core/img/H2.ico' %}"
+      type="image/x-icon"
+    />
+    <!-- Custom fonts for template including Charts-->
+    <link
+      href="{% static 'app_core/vendor/fontawesome-free/css/all.min.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Custom styles for this template-->
+    <link
+      href="{% static 'app_core/css/sb-admin-2.min.css' %}"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link href="{% static 'app_core/css/my_styles.css' %}" rel="stylesheet" />
+    <!-- <script
+      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+      crossorigin="anonymous"
+    ></script> -->
+
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg px-3" style="background-color: #ceeecb">
+      <div class="container-lg">
+        <a class="navbar-brand" href="{% url 'home' %}">
+          <div class="box_img">
+            <img
+              src="{% static 'app_core/img/LOGO_success_smaller.png' %}"
+              alt=""
+            />
+          </div>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active fw-bold text-success"
+                aria-current="page"
+                href="{% url 'home' %}"
+                >Главная</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-success"
+                href="{% url 'under_construction' %}"
+                >Новости</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-success"
+                href="{% url 'under_construction' %}"
+                >Архив</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-success"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <strong>Правление</strong>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item text-success"
+                    href="{% url 'management' %}"
+                    >Структура Правления</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item text-success"
+                    href="{% url 'documents' %}"
+                    >Документы</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item text-success"
+                    href="{% url 'charts' %}"
+                    >Графики</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item text-success"
+                    href="{% url 'under_construction' %}"
+                    >Таблицы</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a
+                    class="dropdown-item text-success"
+                    href="{% url 'under_construction' %}"
+                    >Отчётность по годам</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- Topbar Navbar -->
+
+          {% if request.user.is_authenticated %}
+
+          <!-- Nav Item - User Information -->
+
+          <div
+            class="d-flex align-items-center justify-content-between"
+            style="width: 200px"
+          >
+            <div class="d-none d-lg-inline">
+              <span class="d-none d-lg-inline text-gray-600 small"
+                >{{ request.user }}</span
+              >
+              <img
+                class="img-profile d-none d-lg-inline rounded-circle ml-3"
+                src="{% static 'app_core/img/undraw_profile.svg' %}"
+                alt="user's icon"
+              />
+            </div>
+            <div class="m-2">
+              <a class="btn btn-success" href="{% url 'logout' %}"> Выйти </a>
+            </div>
+          </div>
+
+          {% else %}
+          <div class="row m-2">
+            <a class="btn btn-success" href="{% url 'login' %}"> Войти </a>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </nav>
+
+    {% block content %} {% endblock content %}
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="{% static 'app_core/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'app_core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="{% static 'app_core/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="{% static 'app_core/js/sb-admin-2.js' %}"></script>
+
+  <!-- Page level plugins -->
+  <script src="{% static 'app_core/vendor/chart.js/Chart.min.js' %}"></script>
+
+  <!-- PIE CHARTS -->
+
+  <script src="{% static 'app_core/js/charts/chart-pie-demo.js' %}"></script>
+  <script src="{% static 'app_core/js/charts/chart-pie-demo2.js' %}"></script>
+  <script src="{% static 'app_core/js/charts/chart-pie-demo3.js' %}"></script>
+  <script src="{% static 'app_core/js/charts/chart-pie-demo4.js' %}"></script>
+  <script src="{% static 'app_core/js/charts/chart-pie-demo5.js' %}"></script>
+  <script src="{% static 'app_core/js/charts/chart-pie-demo6.js' %}"></script>
+  <script src="{% static 'app_core/js/charts/chart-pie-demo7.js' %}"></script>
+</html>

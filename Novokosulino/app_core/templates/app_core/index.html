@@ -1,0 +1,28 @@
+{% extends "app_core/base.html" %} {% load static %} {% block content %}
+
+<title>{{title}}</title>
+
+<div class="fs-1 text-center my-5">
+  Рады приветствовать Вас на сайте ТСН "Новокосулино-2"
+</div>
+
+<center>
+  <img
+    src="{% static 'app_core/img/front_image_banner-framed.png' %}"
+    alt="front_image of Novokosulino-2"
+    style="width: 100%"
+  />
+
+  <div class="container-lg">
+    <div
+      class="fs-1 my-5 fst-italic"
+      style="background-color: red; color: white"
+    >
+      !!! В данный момент сайт находится в стадии разработки !!!
+    </div>
+
+    <h2>Новости посёлка</h2>
+    {% include "app_news/index.html" %}
+  </div>
+</center>
+{% endblock content %}

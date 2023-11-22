@@ -38,11 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mainapp.apps.MainappConfig',
+    'app_core.apps.App_coreConfig',
     'members.apps.MembersConfig',
-    'newsapp.apps.NewsappConfig',
-    'docuapp.apps.DocuappConfig',
-    'loadapp.apps.LoadappConfig',
+    'app_news.apps.App_newsConfig',
+    'app_docu.apps.App_docuConfig',
+    'app_load.apps.App_loadConfig',
 ]
 
 MIDDLEWARE = [
