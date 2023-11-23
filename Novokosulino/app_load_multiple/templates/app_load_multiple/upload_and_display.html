@@ -1,0 +1,26 @@
+{% extends "app_core/base.html" %} {% load static %} {% block content %}
+
+<title>{{title}}</title>
+
+<div class="container">
+  <h2>Upload and Display Files</h2>
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit">Upload</button>
+  </form>
+
+  <h3>Uploaded Files:</h3>
+  <ul>
+    {% for file in files %}
+    <li><a href="{{ file.file.url }}">{{ file.file.name }}</a></li>
+    {% empty %}
+    <li>No files uploaded yet.</li>
+    {% endfor %}
+  </ul>
+  {% if uploaded_file %}
+  <h1>Спасибо</h1>
+  {% endif %}
+</div>
+
+{% endblock content %}

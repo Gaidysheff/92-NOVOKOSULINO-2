@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'app_news.apps.App_newsConfig',
     'app_docu.apps.App_docuConfig',
     'app_load.apps.App_loadConfig',
+    'app_load_multiple.apps.AppLoadMultipleConfig',
 ]
 
 MIDDLEWARE = [
