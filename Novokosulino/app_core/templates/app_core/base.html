@@ -12,13 +12,8 @@
       type="image/x-icon"
     />
 
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="{% static 'app_core/css/fonts.css' %}" />
+
     <!-- Custom fonts for template including Charts-->
     <link
       href="{% static 'app_core/vendor/fontawesome-free/css/all.min.css' %}"
@@ -54,7 +49,7 @@
         <a class="navbar-brand" href="{% url 'home' %}">
           <div class="box_img">
             <img
-              src="{% static 'app_core/img/LOGO_success_smaller.png' %}"
+              src="{% static 'app_core/img/LOGO_gold_smaller.png' %}"
               alt=""
             />
           </div>
@@ -79,7 +74,7 @@
                 style="color: #ffecb3; font-family: Lobster"
                 aria-current="page"
                 href="{% url 'home' %}"
-                >Главная</a
+                >Главная |</a
               >
             </li>
             <li class="nav-item">
@@ -87,7 +82,7 @@
                 class="nav-link fs-3"
                 style="color: #ffecb3; font-family: Lobster"
                 href="{% url 'under_construction' %}"
-                >Новости</a
+                >Новости |</a
               >
             </li>
             <li class="nav-item dropdown">

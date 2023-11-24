@@ -15,9 +15,6 @@
               alt="image for news"
             />
           </div>
-          <p class="card-text p-2 m-0" align="start">
-            <small class="text-muted"><i>{{ post.dateCreation }}</i></small>
-          </p>
           <div class="card-body px-4 py-0">
             <div class="text-center">
               <h5 class="fw-bolder">{{ post.title }}</h5>
@@ -25,13 +22,16 @@
               {{post.overview|truncatewords:20}}
             </div>
           </div>
-          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+          <div class="card-footer p-2 pt-0 border-top-0 bg-transparent">
             <div class="text-center">
               <a class="btn btn-success mt-auto" href="{% url 'post' post.id %}"
                 >Подробнее</a
               >
             </div>
           </div>
+          <p class="card-text p-3 m-0" align="end">
+            <small class="text-muted"><i>{{ post.dateCreation }}</i></small>
+          </p>
         </div>
       </div>
       {% endfor %}

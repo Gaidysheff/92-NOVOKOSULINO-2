@@ -33,18 +33,18 @@
 }
 
 .golden_sign_main {
-  font-size: 5.4vw;
+  font-size: 6.3vw;
   text-transform: uppercase;
 }
 
 .golden_sign_support {
-  font-size: 3vw;
+  font-size: 4.5vw;
 }
 
 .golden_sign_main,
 .golden_sign_support {
   color: #cfc09f;
-  font-family: "Lobster", serif;
+  font-family: Lobster;
   /* Загрузить шрифт */
   position: relative;
   margin: 0;
@@ -79,7 +79,7 @@
 
 .jarallax {
   position: relative;
-  height: 50vh;
+  height: 70vh;
   z-index: 0;
 }
 
