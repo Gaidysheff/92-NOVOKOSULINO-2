@@ -13,6 +13,7 @@ urlpatterns = [
     path('members/', include('members.urls')),
     path('docu/', include('app_docu.urls')),
     path('upload/', include('app_load.urls')),
+    path('store/', include('app_store.urls')),
     path('upload_multiple/', include('app_load_multiple.urls')),
     re_path(r'^download/(?P<path>.*)$', serve,
             {'document_root': settings.MEDIA_ROOT}),

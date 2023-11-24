@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'app_docu.apps.App_docuConfig',
     'app_load.apps.App_loadConfig',
     'app_load_multiple.apps.AppLoadMultipleConfig',
+    'app_store.apps.AppStoreConfig',
 ]
 
 MIDDLEWARE = [

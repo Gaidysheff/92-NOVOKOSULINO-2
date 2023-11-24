@@ -79,15 +79,30 @@
 
 .jarallax {
   position: relative;
-  height: 70vh;
+  height: 50vh;
   z-index: 0;
 }
 
-/* ======================= 992 ========================== */
+.jarallax-img {
+  width: 50%;
+}
+
+/* ================ Addings to navbar =================== */
+
+.transform:hover {
+  transform: scale(1.2);
+  text-shadow: 1px 1px 2px black, 0 0 1em rgb(255, 242, 0);
+}
+
+/* ================== LG 992 (burger) =================== */
 
 @media (max-width: 992px) {
   .member {
     font-size: 0.9rem;
+  }
+
+  .transform:hover {
+    transform: translate(10%, 0%) scale(1.2);
   }
 }
 
