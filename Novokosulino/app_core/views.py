@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.conf import settings
 from app_news.models import Post
-from app_core.models import LoadedFiles
 
 
 menu = ['на Главную страницу', 'Графики', 'Таблицы']
@@ -34,20 +33,3 @@ def charts_test(request):
 
 def under_construction(request):
     return render(request, 'app_core/under_construction.html', {'menu': menu, 'title': 'Страница в разработке'})
-
-
-# def file_loading(request):
-#     all_files = LoadedFiles.objects.all()
-
-#     context = {
-#         'all_files': all_files,
-#         'title': 'Загрузка файлов'
-#     }
-
-#     if request.POST:
-#         # if request.method == 'POST' and request.FILES['myfile']:
-#         LoadedFiles.objects.create(
-#             text=request.POST.get('text'),
-#             file=request.FILES.get('file')
-#         )
-#     return render(request, 'app_core/files_uploading.html', context)

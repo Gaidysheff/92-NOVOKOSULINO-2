@@ -17,6 +17,72 @@
   /* width: auto; */
 }
 
+/* ======================= GOLDEN SIGN ========================== */
+
+.golden_container {
+  background: radial-gradient(ellipse at center, #443501 0%, #000000 100%);
+  height: 100%;
+}
+
+.golden_box {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.golden_sign_main {
+  font-size: 5.4vw;
+  text-transform: uppercase;
+}
+
+.golden_sign_support {
+  font-size: 3vw;
+}
+
+.golden_sign_main,
+.golden_sign_support {
+  color: #cfc09f;
+  font-family: "Lobster", serif;
+  /* Загрузить шрифт */
+  position: relative;
+  margin: 0;
+  font-weight: 400;
+  transform: scale(1);
+  text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f,
+    5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.golden_sign_main:before,
+.golden_sign_support:before {
+  content: attr(data-heading);
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    #cfc09f 12%,
+    #634f2c 22%,
+    #cfc09f 26%,
+    #cfc09f 27%,
+    #ffecb3 40%,
+    #3a2c0f 78%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+/* ==================== Jarallax ====================== */
+
+.jarallax {
+  position: relative;
+  height: 50vh;
+  z-index: 0;
+}
+
 /* ======================= 992 ========================== */
 
 @media (max-width: 992px) {

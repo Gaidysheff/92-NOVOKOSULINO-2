@@ -3,12 +3,18 @@
     <div class="row g-2 g-lg-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
       {% for post in posts %}
       <div class="col mb-5">
-        <div class="card h-100" style="min-height: 600px">
-          <img
-            class="card-img-top h-50"
-            src="{{ post.picture.url }}"
-            alt="image for news"
-          />
+        <div class="card shadow-lg h-100" style="min-height: 600px">
+          <div
+            class="d-flex justify-content-center overflow-hidden p-4"
+            style="height: 300px"
+          >
+            <img
+              class="card-img-top"
+              style="height: 100%; width: auto"
+              src="{{ post.picture.url }}"
+              alt="image for news"
+            />
+          </div>
           <p class="card-text p-2 m-0" align="start">
             <small class="text-muted"><i>{{ post.dateCreation }}</i></small>
           </p>

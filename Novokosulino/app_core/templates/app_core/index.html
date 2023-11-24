@@ -2,26 +2,42 @@
 
 <title>{{title}}</title>
 
-<div class="fs-1 text-center my-5">
-  Рады приветствовать Вас на сайте ТСН "Новокосулино-2"
-</div>
+<header class="py-5 golden_container">
+  <div class="container px-4 px-lg-5 my-5">
+    <div class="golden_box">
+      <div data-heading="Добро пожаловать !" class="golden_sign_main">
+        Добро пожаловать !
+      </div>
+    </div>
+    <div class="container-lg">
+      <div class="golden_box">
+        <div data-heading="Здесь жить хочется !" class="golden_sign_support">
+          Здесь жить хочется !
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 
 <center>
-  <img
-    src="{% static 'app_core/img/front_image_banner-framed.png' %}"
-    alt="front_image of Novokosulino-2"
-    style="width: 100%"
-  />
-
+  <div class="p-3">
+    <img
+      src="{% static 'app_core/img/front_image_banner-framed.png' %}"
+      alt="front_image of Novokosulino-2"
+      style="width: 100%"
+    />
+  </div>
   <div class="container-lg">
-    <div
+    <!-- <div
       class="fs-1 my-5 fst-italic"
       style="background-color: red; color: white"
     >
       !!! В данный момент сайт находится в стадии разработки !!!
-    </div>
+    </div> -->
 
-    <h2>Новости посёлка</h2>
+    <div class="display-1" style="font-family: Lobster; opacity: 0.7">
+      Новости посёлка
+    </div>
     {% include "app_news/index.html" %}
   </div>
 </center>

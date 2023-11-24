@@ -11,6 +11,14 @@
       href="{% static 'app_core/img/H2.ico' %}"
       type="image/x-icon"
     />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
     <!-- Custom fonts for template including Charts-->
     <link
       href="{% static 'app_core/vendor/fontawesome-free/css/all.min.css' %}"
@@ -31,15 +39,17 @@
       crossorigin="anonymous"
     />
     <link href="{% static 'app_core/css/my_styles.css' %}" rel="stylesheet" />
-    <!-- <script
-      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
-      crossorigin="anonymous"
-    ></script> -->
+
+    <!-- Jarallax CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.css"
+      rel="stylesheet"
+    />
 
     <title>{{ title }}</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg px-3" style="background-color: #ceeecb">
+    <nav class="navbar navbar-expand-lg px-3 navbar-dark bg-dark">
       <div class="container-lg">
         <a class="navbar-brand" href="{% url 'home' %}">
           <div class="box_img">
@@ -51,6 +61,7 @@
         </a>
         <button
           class="navbar-toggler"
+          style="color: #ffecb3"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarText"
@@ -64,7 +75,8 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a
-                class="nav-link active fw-bold text-success"
+                class="nav-link active fs-3"
+                style="color: #ffecb3; font-family: Lobster"
                 aria-current="page"
                 href="{% url 'home' %}"
                 >Главная</a
@@ -72,21 +84,58 @@
             </li>
             <li class="nav-item">
               <a
-                class="nav-link text-success"
+                class="nav-link fs-3"
+                style="color: #ffecb3; font-family: Lobster"
                 href="{% url 'under_construction' %}"
                 >Новости</a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item dropdown">
               <a
-                class="nav-link text-success"
-                href="{% url 'under_construction' %}"
-                >Архив</a
+                class="nav-link dropdown-toggle fs-3"
+                style="color: #ffecb3; font-family: Lobster"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
+                <strong>Архив</strong>
+              </a>
+              <ul class="dropdown-menu fs-4" style="font-family: Lobster">
+                <li>
+                  <a
+                    class="dropdown-item text-success"
+                    href="{% url 'under_construction' %}"
+                    >Архив-1</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item text-success"
+                    href="{% url 'under_construction' %}"
+                    >Архив-2</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item text-success"
+                    href="{% url 'under_construction' %}"
+                    >Архив-3</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item text-success"
+                    href="{% url 'under_construction' %}"
+                    >Архив-4</a
+                  >
+                </li>
+              </ul>
             </li>
             <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle text-success"
+                class="nav-link dropdown-toggle fs-3"
+                style="color: #ffecb3; font-family: Lobster"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -94,7 +143,7 @@
               >
                 <strong>Правление</strong>
               </a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu fs-4" style="font-family: Lobster">
                 <li>
                   <a
                     class="dropdown-item text-success"
@@ -156,13 +205,17 @@
               />
             </div>
             <div class="m-2">
-              <a class="btn btn-success" href="{% url 'logout' %}"> Выйти </a>
+              <a class="btn btn-outline-secondary" href="{% url 'logout' %}">
+                Выйти
+              </a>
             </div>
           </div>
 
           {% else %}
           <div class="row m-2">
-            <a class="btn btn-success" href="{% url 'login' %}"> Войти </a>
+            <a class="btn btn-outline-secondary" href="{% url 'login' %}">
+              Войти
+            </a>
           </div>
           {% endif %}
         </div>
@@ -176,6 +229,12 @@
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"
   ></script>
+
+  <!-- Jarallax JS -->
+  <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
+
+  <!-- Jarallax JS: Optional video extension -->
+  <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax-video.min.js"></script>
 
   <!-- Bootstrap core JavaScript-->
   <script src="{% static 'app_core/vendor/jquery/jquery.min.js' %}"></script>
