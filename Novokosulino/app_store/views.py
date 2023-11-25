@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import NovokosulinoArchive
 
 
 def archive(request):
@@ -6,9 +7,9 @@ def archive(request):
 
 
 def storeNovokosulino(request):
-    # posts = Post.objects.all()
+    posts = NovokosulinoArchive.objects.all()
     context = {
-        # 'posts': posts,
+        'posts': posts,
         'title': 'История посёлка',
     }
     return render(request, "app_store/village.html", context)
