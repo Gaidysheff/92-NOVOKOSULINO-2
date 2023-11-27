@@ -5,10 +5,11 @@ from django.utils.safestring import mark_safe
 
 @admin.register(NovokosulinoArchive)
 class NovokosulinoArchiveAdmin(admin.ModelAdmin):
-    list_display = ('id', 'year', 'text', 'uploadedImage',
+    list_display = ('id', 'year', 'text', 'order', 'uploadedImage',
                     'dateOfUpload', 'get_html_image', )
     list_display_links = ('id', 'year', 'text',
                           'uploadedImage', 'get_html_image',)
+    list_editable = ('order',)
     search_fields = ('text',)
     list_filter = ('year',)
     readonly_fields = ('id', 'dateOfUpload', 'get_html_image',)

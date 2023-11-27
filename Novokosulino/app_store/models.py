@@ -19,6 +19,7 @@ class NovokosulinoArchive(models.Model):
                             default='2024', verbose_name='Год')
     text = models.CharField(max_length=200, blank=True,
                             null=True, verbose_name='Комментарий')
+    order = models.DecimalField(max_digits=2, decimal_places=0, default=0, verbose_name='Порядковый №')
     uploadedImage = models.ImageField(
         upload_to="village/%Y/%m/%d/", verbose_name='Файл')
     dateOfUpload = models.DateField(

@@ -7,7 +7,7 @@ def archive(request):
 
 
 def storeNovokosulino(request):
-    posts = NovokosulinoArchive.objects.all()
+    posts = NovokosulinoArchive.objects.filter(year='2015').order_by("order")
     context = {
         'posts': posts,
         'title': 'История посёлка',
