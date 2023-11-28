@@ -17,6 +17,7 @@
   /* width: auto; */
 }
 
+
 /* ======================= GOLDEN SIGN ========================== */
 
 .golden_container {
@@ -130,3 +131,7 @@
   xl: 1200px,
   xxl: 1400px
 ); */
+
+/* .green_section {
+  background-color: #a23b3b34;
+} */

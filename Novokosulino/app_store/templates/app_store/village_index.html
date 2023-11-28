@@ -1,0 +1,234 @@
+{% extends "app_core/base.html" %} {% load static %} {% block content %}
+
+ <style type="text/css">
+
+  .green_section {
+    background-color: #4ea23b34;
+  }
+
+  .yellow_section {
+    background-color: #a2a23b34;
+  }
+
+  .blue_section {
+    background-color: #3b56a234;
+  }
+
+  .red_section {
+    background-color: #a23b3b34;
+  }
+
+ </style>
+
+<title>{{title}}</title>
+
+<div data-jarallax data-speed="0.2" class="jarallax p-3">
+  <img
+    src="{% static 'app_store/images/village/heading.png' %}"
+    class="jarallax-img"
+    alt="front_image of Novokosulino-2"
+    style="width: 100%"
+  />
+</div>
+
+<center>
+  <section class="py-2">
+    <div class="container mt-5">
+      <div class="display-1" style="text-shadow: 5px 5px 10px #0a0002">
+        История нашего посёлка
+      </div>
+      <hr />
+      <div class="display-4">2015 г.</div>
+      <div class="row g-2 g-lg-4 row-cols-1 row-cols-md-2 row-cols-lg-3 my-3">
+        {% for post in posts15 %}
+        <div class="col mb-5">
+          <div class="card shadow-lg h-100">
+            <div
+              class="d-flex justify-content-center overflow-hidden"
+              style="height: 300px"
+            >
+              <a href="{% url 'image_from_village' post.id %}" target="_blank">
+                <img
+                  class=""
+                  style="height: 100%; width: auto"
+                  src="{{ post.uploadedImage.url }}"
+                  alt="image for news"
+                />
+              </a>
+            </div>
+            <div class="p-3">
+              <div class="align-middle">{{ post.text }}</div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</center>
+
+<div data-jarallax data-speed="0.2" class="jarallax p-3">
+  <img
+    src="{% static 'app_store/images/village/heading2.jpg' %}"
+    class="jarallax-img"
+    alt="front_image of Novokosulino-2"
+    style="width: 100%"
+  />
+</div>
+
+<center>
+  <section class="py-2 green_section" >
+    <div class="container mt-5">
+      <div class="display-4">2016 г.</div>
+      <div class="row g-2 g-lg-4 row-cols-1 row-cols-md-2 row-cols-lg-3 my-3">
+        {% for post in posts16 %}
+        <div class="col mb-5">
+          <div class="card shadow-lg h-100">
+            <div
+              class="d-flex justify-content-center overflow-hidden"
+              style="height: 300px"
+            >
+              <a href="{% url 'image_from_village' post.id %}" target="_blank">
+                <img
+                  class=""
+                  style="height: 100%; width: auto"
+                  src="{{ post.uploadedImage.url }}"
+                  alt="image for news"
+                />
+              </a>
+            </div>
+            <div class="p-3">
+              <div class="align-middle">{{ post.text }}</div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</center>
+
+<div data-jarallax data-speed="0.2" class="jarallax p-3">
+  <img
+    src="{% static 'app_store/images/village/heading3.jpg' %}"
+    class="jarallax-img"
+    alt="front_image of Novokosulino-2"
+    style="width: 100%"
+  />
+</div>
+
+<center>
+  <section class="py-2 yellow_section" >
+    <div class="container mt-5">
+      <div class="display-4">2017 г.</div>
+      <div class="row g-2 g-lg-4 row-cols-1 row-cols-md-2 row-cols-lg-3 my-3">
+        {% for post in posts17 %}
+        <div class="col mb-5">
+          <div class="card shadow-lg h-100">
+            <div
+              class="d-flex justify-content-center overflow-hidden"
+              style="height: 300px"
+            >
+              <a href="{% url 'image_from_village' post.id %}" target="_blank">
+                <img
+                  class=""
+                  style="height: 100%; width: auto"
+                  src="{{ post.uploadedImage.url }}"
+                  alt="image for news"
+                />
+              </a>
+            </div>
+            <div class="p-3">
+              <div class="align-middle">{{ post.text }}</div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</center>
+
+<div data-jarallax data-speed="0.2" class="jarallax p-3">
+  <img
+    src="{% static 'app_store/images/village/heading4.jpg' %}"
+    class="jarallax-img"
+    alt="front_image of Novokosulino-2"
+    style="width: 100%"
+  />
+</div>
+
+<center>
+  <section class="py-2 blue_section" >
+    <div class="container mt-5">
+      <div class="display-4">2018 г.</div>
+      <div class="row g-2 g-lg-4 row-cols-1 row-cols-md-2 row-cols-lg-3 my-3">
+        {% for post in posts18 %}
+        <div class="col mb-5">
+          <div class="card shadow-lg h-100">
+            <div
+              class="d-flex justify-content-center overflow-hidden"
+              style="height: 300px"
+            >
+              <a href="{% url 'image_from_village' post.id %}" target="_blank">
+                <img
+                  class=""
+                  style="height: 100%; width: auto"
+                  src="{{ post.uploadedImage.url }}"
+                  alt="image for news"
+                />
+              </a>
+            </div>
+            <div class="p-3">
+              <div class="align-middle">{{ post.text }}</div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</center>
+
+<div data-jarallax data-speed="0.2" class="jarallax p-3">
+  <img
+    src="{% static 'app_store/images/village/heading5.jpg' %}"
+    class="jarallax-img"
+    alt="front_image of Novokosulino-2"
+    style="width: 100%"
+  />
+</div>
+
+<center>
+  <section class="py-2 red_section" >
+    <div class="container mt-5">
+      <div class="display-4">2019 г.</div>
+      <div class="row g-2 g-lg-4 row-cols-1 row-cols-md-2 row-cols-lg-3 my-3">
+        {% for post in posts19 %}
+        <div class="col mb-5">
+          <div class="card shadow-lg h-100">
+            <div
+              class="d-flex justify-content-center overflow-hidden"
+              style="height: 300px"
+            >
+              <a href="{% url 'image_from_village' post.id %}" target="_blank">
+                <img
+                  class=""
+                  style="height: 100%; width: auto"
+                  src="{{ post.uploadedImage.url }}"
+                  alt="image for news"
+                />
+              </a>
+            </div>
+            <div class="p-3">
+              <div class="align-middle">{{ post.text }}</div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</center>
+
+{% endblock content %}

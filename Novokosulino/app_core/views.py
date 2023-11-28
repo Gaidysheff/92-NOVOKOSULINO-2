@@ -7,10 +7,10 @@ menu = ['на Главную страницу', 'Графики', 'Таблиц�
 
 
 def index(request):
-    posts = Post.objects.all()
+    posts = Post.objects.filter(status='ACT').order_by("order")
     context = {
         'posts': posts,
-        'title': 'Новости',
+        'title': 'Главная страница',
     }
     return render(request, "app_core/index.html", context)
 
