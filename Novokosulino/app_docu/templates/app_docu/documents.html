@@ -1,5 +1,11 @@
 {% extends "app_core/base.html" %} {% load static %} {% block content %}
 
+<style>
+  .img-box-document {
+    width: 200px;
+    height: auto;
+  }
+</style>
 <title>{{title}}</title>
 
 <div class="container">
@@ -7,7 +13,9 @@
     <div class="col-12 col-md-8 col-lg-6 mx-auto">
       {% for post in file %}
       <h2>{{post.title}}</h2>
-      <img class="card-img-top" src="{{ post.icon.url }}" alt="..." />
+      <div class="img-box-document">
+        <img class="card-img-top" src="{{ post.icon.url }}" alt="..." />
+      </div>
       <a href="{{post.file_docu.url}}" download="{{post.file_docu.url}}"
         >Загрузить</a
       >

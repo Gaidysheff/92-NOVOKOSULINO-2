@@ -1,38 +1,38 @@
-{% extends "app_core/base.html" %} {% load static %} 
-{% block content %}{% load crispy_forms_tags %} 
+{% extends "app_core/base.html" %} {% load static %} {% block content %} <br />
+{% load crispy_forms_tags %}
 
 <title>{{title}}</title>
 
-<div class="container my-5">
-<div class="row">
-<div class="col-10 mx-auto">
-<div class="card p-3 shadow-lg rounded">
-    <h2 class="display-3">Загрузка и отображение файлов</h2>
+<center>
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-10 mx-auto">
+        <div class="card p-3 shadow-lg rounded">
+          <h2 class="display-3">Загрузка и отображение файлов</h2>
 
-    <form method="post" enctype="multipart/form-data">
-      {% csrf_token %} {% crispy form %}
-      <div class="col-auto">
-        <button type="submit" class="btn-lg btn-primary mb-3">Загрузить</button>
+          <form method="post" enctype="multipart/form-data">
+            {% csrf_token %} {% crispy form %}
+            <div class="col-auto">
+              <button type="submit" class="btn-lg btn-primary mb-3">
+                Загрузить
+              </button>
+            </div>
+          </form>
+
+          <h3 class="display-6">Загруженные файлы:</h3>
+          <ul class="text-start">
+            {% for file in files %}
+            <li><a href="{{ file.file.url }}">{{ file.file.name }}</a></li>
+            {% empty %}
+            <li class="fs-3">Пока ничего не загружено.</li>
+            {% endfor %}
+          </ul>
+          {% if uploaded_file %}
+          <h1>Спасибо</h1>
+          {% endif %}
+        </div>
       </div>
-    
-    </form>
-
-   
-  
-    <h3 class="display-6">Загруженные файлы:</h3>
-    <ul>
-      {% for file in files %}
-      <li><a href="{{ file.file.url }}">{{ file.file.name }}</a></li>
-      {% empty %}
-      <li class="display-6">Пока ничего не загружено.</li>
-      {% endfor %}
-    </ul>
-    {% if uploaded_file %}
-    <h1>Спасибо</h1>
-    {% endif %}
-</div>
-</div>
-</div>
-</div>
-
+    </div>
+  </div>
+</center>
 {% endblock content %}

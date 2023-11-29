@@ -17,7 +17,6 @@
   /* width: auto; */
 }
 
-
 /* ======================= GOLDEN SIGN ========================== */
 
 .golden_container {
@@ -34,12 +33,12 @@
 }
 
 .golden_sign_main {
-  font-size: 6.3vw;
+  font-size: 4.8vw;
   text-transform: uppercase;
 }
 
 .golden_sign_support {
-  font-size: 4.5vw;
+  font-size: 4.1vw;
 }
 
 .golden_sign_main,
