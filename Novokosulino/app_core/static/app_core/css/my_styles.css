@@ -94,6 +94,30 @@
   text-shadow: 1px 1px 2px black, 0 0 1em rgb(255, 242, 0);
 }
 
+/* ___________________Returning Button ____________ */
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 99;
+  /* font-family: "Arial Narrow"; */
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: #ebe6d6;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* #myBtn:hover {
+  background-color: #555;
+} */
+
+/* ========================= MEDIA ======================== */
 /* ================== LG 992 (burger) =================== */
 
 @media (max-width: 992px) {

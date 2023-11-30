@@ -1,5 +1,6 @@
 {% extends "app_core/base.html" %} {% load static %} {% block content %}
 
+
 <title>{{title}}</title>
 
 <header class="py-5 golden_container">
@@ -49,7 +50,13 @@
 
       {% include "app_news/index.html" %}
 
-
   </div>
 </center>
+
+{% comment %} ============= Returning Button ================= {% endcomment %}
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+  Наверх
+</button>
+
 {% endblock content %}
