@@ -19,19 +19,19 @@
             <div class="text-center">
               <h5 class="fw-bolder">{{ post.title }}</h5>
               <br />
-              {{post.overview|truncatewords:20}}
+              <div>{{post.overview|truncatewords:20}}</div>
             </div>
           </div>
           <div class="card-footer p-2 pt-0 border-top-0 bg-transparent">
             <div class="text-center">
-              <a class="btn btn-success mt-auto" href="{% url 'post' post.id %}"
+              <a class="btn btn-success mb-5" href="{% url 'post' post.id %}"
                 >Подробнее</a
               >
             </div>
           </div>
-          <p class="card-text p-3 m-0" align="end">
+          {% comment %} <p class="card-text p-3 m-0" align="end">
             <small class="text-muted"><i>{{ post.dateCreation }}</i></small>
-          </p>
+          </p> {% endcomment %}
         </div>
       </div>
       {% endfor %}

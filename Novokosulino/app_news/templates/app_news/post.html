@@ -15,16 +15,16 @@
               />
             </div>
             <div class="card-body">
-              <h5 class="card-title">{{ post.title }}</h5>
-              <div class="card-text" align="justify">
+              <h5 class="card-title pb-3">{{ post.title }}</h5>
+              <div class="card-text text-start px-4" align="justify">
                 {% autoescape off %} {{ post.text|linebreaks }}
                 {%endautoescape%}
               </div>
-              <p class="card-text" align="end">
+              {% comment %} <p class="card-text" align="end">
                 <small class="text-muted"
                   ><i>дата создания: {{ post.dateCreation }}</i></small
                 >
-              </p>
+              </p> {% endcomment %}
             </div>
           </div>
         </div>

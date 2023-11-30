@@ -4,6 +4,8 @@ from django.db import models
 class LoadedDocuments(models.Model):
     title = models.CharField(max_length=100, blank=True,
                              null=True, verbose_name='Заголовок')
+    date = models.CharField(max_length=50, blank=True,
+                             null=True, verbose_name='Дата документа')
     file_docu = models.FileField(upload_to='documents/%Y/%m/%d/',
                                  verbose_name='Файл')
     icon = models.ImageField(

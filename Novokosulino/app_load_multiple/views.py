@@ -62,3 +62,5 @@ def upload_for_village(request):
     }
 
     return render(request, 'app_load_multiple/upload_for_village.html', context)
+
+

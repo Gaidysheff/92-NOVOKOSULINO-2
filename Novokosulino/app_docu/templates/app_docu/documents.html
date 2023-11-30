@@ -5,23 +5,83 @@
     width: 200px;
     height: auto;
   }
+
+  .download-link:hover {
+    transform: translate(10%, 10%) scale(1.2);
+    background-color: #009d0d;
+    color: #ffffff;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ebe6d6;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+.image-icon {
+  width: 150px;
+  height: 200px;
+}
+  .image-extended {
+    width: 600px;
+    height: 800px;
+  }
 </style>
 <title>{{title}}</title>
 
 <div class="container">
   <div class="row my-5">
-    <div class="col-12 col-md-8 col-lg-6 mx-auto">
-      {% for post in file %}
-      <h2>{{post.title}}</h2>
-      <div class="img-box-document">
-        <img class="card-img-top" src="{{ post.icon.url }}" alt="..." />
+    {% for post in file %}
+    <div class="text-center display-6">{{post.title}}</div>
+    <div class="text-center fs-5 mb-3">{{post.date}}</div>
+    <div class="col-6 d-flex justify-content-end">
+
+{% comment %} ------------------------------------------- {% endcomment %}
+
+  <div class="dropdown">
+    <img class="image-icon shadow-lg"
+      src="{{ post.icon.url }}"
+      alt="иконка протокола"
+    />
+    {% comment %} <span class="click_on_image">
+      <br />Move the mouse over the image below <br />
+      to open the dropdown content.</span
+    > {% endcomment %}
+    <div class="dropdown-content">
+      <img
+        class="image-extended"
+        src="{{ post.icon.url }} "
+        alt="Протокол"
+      />
+      <div class="">
+        Протокол
       </div>
-      <a href="{{post.file_docu.url}}" download="{{post.file_docu.url}}"
-        >Загрузить</a
-      >
-      {% endfor %}
     </div>
   </div>
+
+
+{% comment %} ------------------------------------ {% endcomment %}
+        {% comment %} <img class="card-img-top" src="{{ post.icon.url }}" alt="..." /> {% endcomment %}
+
+    </div>
+    <div class="col-6 display-5">
+        <a href="{{post.file_docu.url}}" download="{{post.file_docu.url}}" class="download-link"
+          >Загрузить</a>
+    </div>
+    {% endfor %}
+  </div>
+
 </div>
 
 {% endblock content %}

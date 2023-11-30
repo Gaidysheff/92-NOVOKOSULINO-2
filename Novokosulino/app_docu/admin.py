@@ -5,8 +5,8 @@ from django.utils.safestring import mark_safe
 
 @admin.register(LoadedDocuments)
 class LoadedDocumentsAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'file_docu', 'get_html_image',)
-    list_display_links = ('id', 'title',)
+    list_display = ('id', 'title', 'date', 'file_docu', 'get_html_image',)
+    list_display_links = ('id', 'title', 'date',)
     search_fields = ('title',)
     readonly_fields = ('get_html_image',)
     save_on_top = True
