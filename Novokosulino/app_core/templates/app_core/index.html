@@ -1,9 +1,8 @@
 {% extends "app_core/base.html" %} {% load static %} {% block content %}
 
-
 <title>{{title}}</title>
 
-<header class="py-5 golden_container">
+<header class="py-1 golden_container">
   <div class="container px-4 px-lg-5 my-5">
     <div class="golden_box">
       <div
@@ -36,27 +35,168 @@
       style="width: 100%"
     />
   </div>
-  <div class="container-lg">
-    <!-- <div
-      class="fs-1 my-5 fst-italic"
-      style="background-color: red; color: white"
+  <div class="container-lg pb-5">
+    <div class="display-1 my-5" style="font-family: Lobster; opacity: 0.7">
+      Основные разделы:
+    </div>
+
+    <a
+      href="{% url 'under_construction' %}"
+      class="card shadow-lg mb-5 text-black"
+      style="max-width: 900px; text-decoration: none"
     >
-      !!! В данный момент сайт находится в стадии разработки !!!
-    </div> -->
+      <div class="row g-0">
+        <div class="col-md-4">
+          <div
+            class="d-flex justify-content-center overflow-hidden p-4"
+            style="height: 200px"
+          >
+            <img
+              class="img-fluid rounded-start"
+              src="{% static 'app_core/img/main_page/anouncement.png' %}"
+              alt="chat"
+            />
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div
+            class="card-body d-flex flex-column justify-content-between"
+            style="height: 100%"
+          >
+            <h3 class="card-title">Хочу почитать Доску Объявлений</h3>
+            <p class="card-text fs-5">
+              В этом разделе вы можете ознакомиться с текущими объявлениями.
+            </p>
+            <p class="card-text">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <a
+      href="{% url 'under_construction' %}"
+      class="card shadow-lg mb-5 text-black"
+      style="max-width: 900px; text-decoration: none"
+    >
+      <div class="row g-0">
+        <div class="col-md-4">
+          <div
+            class="d-flex justify-content-center overflow-hidden p-4"
+            style="height: 200px"
+          >
+            <img
+              class="img-fluid rounded-start"
+              src="{% static 'app_core/img/main_page/document.png' %}"
+              alt="chat"
+            />
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div
+            class="card-body d-flex flex-column justify-content-between"
+            style="height: 100%"
+          >
+            <h3 class="card-title">
+              Хочу ознакомиться с официальными документами
+            </h3>
+            <p class="card-text fs-5">
+              В этом разделе вы можете .................
+            </p>
+            <p class="card-text">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <a
+      href="{% url 'under_construction' %}"
+      class="card shadow-lg mb-5 text-black"
+      style="max-width: 900px; text-decoration: none"
+    >
+      <div class="row g-0">
+        <div class="col-md-4">
+          <div
+            class="d-flex justify-content-center overflow-hidden p-4"
+            style="height: 200px"
+          >
+            <img
+              class="img-fluid rounded-start"
+              src="{% static 'app_core/img/main_page/chat.png' %}"
+              alt="chat"
+            />
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div
+            class="card-body d-flex flex-column justify-content-between"
+            style="height: 100%"
+          >
+            <h3 class="card-title">Хочу пообщаться с соседями</h3>
+            <p class="card-text fs-5">
+              В этом разделе вы можете оставить своё сообщение, прикрепить
+              фотографию, прочитать комментарии на ваш пост.
+            </p>
+            <p class="card-text">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <a
+      href="{% url 'under_construction' %}"
+      class="card shadow-lg mb-3 text-black"
+      style="max-width: 900px; text-decoration: none"
+    >
+      <div class="row g-0">
+        <div class="col-md-4">
+          <div
+            class="d-flex justify-content-center overflow-hidden p-4"
+            style="height: 200px"
+          >
+            <img
+              class="img-fluid rounded-start"
+              src="{% static 'app_core/img/main_page/album.png' %}"
+              alt="chat"
+            />
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div
+            class="card-body d-flex flex-column justify-content-between"
+            style="height: 100%"
+          >
+            <h3 class="card-title">
+              Хочу понастальгировать в архиве фотографий
+            </h3>
+            <p class="card-text fs-5">
+              В этом разделе вы можете ..................
+            </p>
+            <p class="card-text">
+              <small class="text-body-secondary">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    {% comment %}
 
     <div class="display-1" style="font-family: Lobster; opacity: 0.7">
       Новости посёлка
     </div>
 
-      {% include "app_news/index.html" %}
-
+    {% include "app_news/index.html" %} {% endcomment %}
   </div>
 </center>
 
 {% comment %} ============= Returning Button ================= {% endcomment %}
 
-<button onclick="topFunction()" id="myBtn" title="Go to top">
-  Наверх
-</button>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Наверх</button>
 
 {% endblock content %}

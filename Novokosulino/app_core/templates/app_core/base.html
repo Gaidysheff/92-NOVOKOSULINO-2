@@ -11,7 +11,6 @@
       href="{% static 'app_core/img/H2.ico' %}"
       type="image/x-icon"
     />
-
     <link rel="stylesheet" href="{% static 'app_core/css/fonts.css' %}" />
 
     <!-- Custom fonts for template including Charts-->
@@ -77,14 +76,16 @@
                 >Главная
               </a>
             </li>
-            {% comment %} <li class="nav-item">
+            {% comment %}
+            <li class="nav-item">
               <a
                 class="nav-link me-3 fs-3 transform"
                 style="color: #ffecb3; font-family: Lobster"
                 href="{% url 'under_construction' %}"
                 >Новости
               </a>
-            </li> {% endcomment %}
+            </li>
+            {% endcomment %}
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle fs-3 me-3 transform"
@@ -187,7 +188,7 @@
 
           <div
             class="d-flex align-items-center justify-content-between"
-            style="width: 200px"
+            style="width: 250px"
           >
             <div class="d-none d-lg-inline">
               <span class="d-none d-lg-inline text-gray-600 small"
@@ -203,6 +204,14 @@
               <a class="btn btn-outline-secondary" href="{% url 'logout' %}">
                 Выйти
               </a>
+              <img
+                class="img-profile d-inlinenone d-lg-none rounded-circle ml-3"
+                src="{% static 'app_core/img/undraw_profile.svg' %}"
+                alt="user's icon"
+              />
+              <span class="d-inline d-lg-none text-gray-600 small ms-1"
+                >{{ request.user }}</span
+              >
             </div>
           </div>
 
@@ -256,24 +265,29 @@
 
   <script>
     //  ======================= Returning Button ===========================
-    
+
     let mybutton = document.getElementById("myBtn");
-    
+
     // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {scrollFunction()};
-    
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
     function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
         mybutton.style.display = "block";
       } else {
         mybutton.style.display = "none";
       }
     }
-    
+
     // When the user clicks on the button, scroll to the top of the document
     function topFunction() {
       document.body.scrollTop = 0; // For Safari
       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    } 
-    </script>
+    }
+  </script>
 </html>
