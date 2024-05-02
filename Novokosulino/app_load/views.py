@@ -14,4 +14,4 @@ def uploadFile(request):
 
     documents = models.Document.objects.all()
 
-    return render(request, "app_core/upload-file.html", context={"files": documents})
+    return render(request, "app_load/upload-file.html", context={"files": documents})

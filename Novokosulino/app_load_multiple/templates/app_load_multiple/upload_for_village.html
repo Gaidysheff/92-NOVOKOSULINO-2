@@ -1,5 +1,5 @@
 {% extends "app_core/base.html" %} {% load static %} {% block content %} <br />
-{% load crispy_forms_tags %}
+<!-- {% load crispy_forms_tags %} -->
 
 <title>{{title}}</title>
 
@@ -11,7 +11,8 @@
           <h2 class="display-3">Загрузка и отображение файлов</h2>
 
           <form method="post" enctype="multipart/form-data">
-            {% csrf_token %} {% crispy form %}
+            {% csrf_token %} {{ form.as_p }}
+            <!-- {% crispy form %} -->
             <div class="col-auto">
               <button type="submit" class="btn-lg btn-primary mb-3">
                 Загрузить
