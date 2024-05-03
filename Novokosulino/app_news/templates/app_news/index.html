@@ -1,3 +1,4 @@
+{% extends 'app_core/base.html' %} {% block content %}
 <section class="py-2">
   <div class="container mt-5">
     <div class="row g-2 g-lg-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
@@ -29,12 +30,15 @@
               >
             </div>
           </div>
-          {% comment %} <p class="card-text p-3 m-0" align="end">
+          {% comment %}
+          <p class="card-text p-3 m-0" align="end">
             <small class="text-muted"><i>{{ post.dateCreation }}</i></small>
-          </p> {% endcomment %}
+          </p>
+          {% endcomment %}
         </div>
       </div>
       {% endfor %}
     </div>
   </div>
 </section>
+{% endblock content %}

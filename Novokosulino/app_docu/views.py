@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.conf import settings
 from .models import LoadedDocuments
 from django.http import HttpResponse, Http404
@@ -13,6 +13,15 @@ def documents(request):
         'title': 'Загрузка документов'
     }
     return render(request, "app_docu/documents.html", context)
+
+
+def document(request, docu_id):
+    document = get_object_or_404(LoadedDocuments, pk=docu_id)
+    context = {
+        'title': document.title,
+        'document': document,
+    }
+    return render(request, "app_docu/document.html", context)
 
 
 def download(request, path):

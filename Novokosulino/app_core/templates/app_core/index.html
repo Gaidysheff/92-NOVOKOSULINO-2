@@ -41,7 +41,7 @@
     </div>
 
     <a
-      href="{% url 'under_construction' %}"
+      href="{% url 'news' %}"
       class="card shadow-lg mb-5 text-black"
       style="max-width: 900px; text-decoration: none"
     >
@@ -67,7 +67,7 @@
             <p class="card-text fs-5">
               В этом разделе вы можете ознакомиться с текущими объявлениями.
             </p>
-            <p class="card-text">
+            <p class="card-text d-none">
               <small class="text-body-secondary">Last updated 3 mins ago</small>
             </p>
           </div>
@@ -76,7 +76,7 @@
     </a>
 
     <a
-      href="{% url 'under_construction' %}"
+      href="{% url 'documents' %}"
       class="card shadow-lg mb-5 text-black"
       style="max-width: 900px; text-decoration: none"
     >
@@ -102,9 +102,10 @@
               Хочу ознакомиться с официальными документами
             </h3>
             <p class="card-text fs-5">
-              В этом разделе вы можете .................
+              В этом разделе вы можете загрузить на своё устройство официальные
+              документы представленные Правлением ТСН "Новокосулино-2"
             </p>
-            <p class="card-text">
+            <p class="card-text d-none">
               <small class="text-body-secondary">Last updated 3 mins ago</small>
             </p>
           </div>
@@ -141,7 +142,7 @@
               фотографию, прочитать комментарии на ваш пост.
             </p>
             <p class="card-text">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
+              <small class="text-body-secondary">Last updated 3 days ago</small>
             </p>
           </div>
         </div>
@@ -149,7 +150,7 @@
     </a>
 
     <a
-      href="{% url 'under_construction' %}"
+      href="{% url 'archive' %}"
       class="card shadow-lg mb-3 text-black"
       style="max-width: 900px; text-decoration: none"
     >
@@ -175,10 +176,13 @@
               Хочу понастальгировать в архиве фотографий
             </h3>
             <p class="card-text fs-5">
-              В этом разделе вы можете ..................
+              В этом разделе вы можете посмотреть фотографии с различных
+              мероприятий из нашего фотоархива
             </p>
             <p class="card-text">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
+              <small class="text-body-secondary"
+                >Последнее обновление: 16 марта 2024 г.</small
+              >
             </p>
           </div>
         </div>

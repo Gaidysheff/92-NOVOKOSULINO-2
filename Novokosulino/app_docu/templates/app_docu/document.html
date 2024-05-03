@@ -1,0 +1,20 @@
+{% extends "app_core/base.html" %} {% load static %} {% block content %}
+
+<title>{{title}}</title>
+
+<div class="container my-5">
+  <div class="display-6">{{document.title}}</div>
+  <!-- -------------------- -->
+
+  <center>
+    <div class="my-5">
+      <img
+        class="border border-info border-2"
+        src="{{document.file_docu}}"
+        alt="document"
+      />
+    </div>
+  </center>
+</div>
+
+{% endblock content %}

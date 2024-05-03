@@ -3,7 +3,10 @@ from .models import NovokosulinoArchive
 
 
 def archive(request):
-    pass
+    context = {
+        'title': 'Разделы фотоархива',
+    }
+    return render(request, "app_store/main.html", context)
 
 
 def storeNovokosulino(request):
@@ -31,6 +34,7 @@ def storeNovokosulino(request):
         'title': 'История посёлка',
     }
     return render(request, "app_store/village_index.html", context)
+
 
 def storeNovokosulinoPost(request, pk):
     post = NovokosulinoArchive.objects.get(id=pk)

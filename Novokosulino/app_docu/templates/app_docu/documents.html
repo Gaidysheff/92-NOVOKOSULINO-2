@@ -1,87 +1,43 @@
 {% extends "app_core/base.html" %} {% load static %} {% block content %}
 
-<style>
-  .img-box-document {
-    width: 200px;
-    height: auto;
-  }
-
-  .download-link:hover {
-    transform: translate(10%, 10%) scale(1.2);
-    background-color: #009d0d;
-    color: #ffffff;
-  }
-
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #ebe6d6;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-.image-icon {
-  width: 150px;
-  height: 200px;
-}
-  .image-extended {
-    width: 600px;
-    height: 800px;
-  }
-</style>
 <title>{{title}}</title>
 
-<div class="container">
-  <div class="row my-5">
-    {% for post in file %}
-    <div class="text-center display-6">{{post.title}}</div>
-    <div class="text-center fs-5 mb-3">{{post.date}}</div>
-    <div class="col-6 d-flex justify-content-end">
-
-{% comment %} ------------------------------------------- {% endcomment %}
-
-  <div class="dropdown">
-    <img class="image-icon shadow-lg"
-      src="{{ post.icon.url }}"
-      alt="иконка протокола"
-    />
-    {% comment %} <span class="click_on_image">
-      <br />Move the mouse over the image below <br />
-      to open the dropdown content.</span
-    > {% endcomment %}
-    <div class="dropdown-content">
-      <img
-        class="image-extended"
-        src="{{ post.icon.url }} "
-        alt="Протокол"
-      />
-      <div class="">
-        Протокол
+<div class="container my-5">
+  {% for post in file %}
+  <div class="card shadow-lg my-5 mx-auto" style="max-width: 900px">
+    <div class="row g-0">
+      <a
+        href="{% url 'under_construction' %}"
+        class="col-md-4 col-lg-3 d-flex d-md-inline-flex justify-content-center justify-content-md-start"
+      >
+        <img
+          src="{{ post.icon.url }}"
+          class="rounded-md-start border mt-3 mt-md-0"
+          style="max-height: 300px"
+          alt="иконка документа"
+        />
+      </a>
+      <div class="col-md-8 col-lg-9">
+        <div class="card-body">
+          <h4 class="card-title">{{post.title}}</h4>
+          <p class="card-text">
+            <small class="text-body-secondary">{{post.date}}</small>
+          </p>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer.
+          </p>
+          <a
+            href="{{post.file_docu.url}}"
+            download="{{post.file_docu.url}}"
+            class="download-link fs-3"
+            >Загрузить себе</a
+          >
+        </div>
       </div>
     </div>
   </div>
-
-
-{% comment %} ------------------------------------ {% endcomment %}
-        {% comment %} <img class="card-img-top" src="{{ post.icon.url }}" alt="..." /> {% endcomment %}
-
-    </div>
-    <div class="col-6 display-5">
-        <a href="{{post.file_docu.url}}" download="{{post.file_docu.url}}" class="download-link"
-          >Загрузить</a>
-    </div>
-    {% endfor %}
-  </div>
-
+  {% endfor %}
 </div>
 
 {% endblock content %}

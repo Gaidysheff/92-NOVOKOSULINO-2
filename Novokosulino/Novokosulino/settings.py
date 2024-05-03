@@ -45,8 +45,8 @@ INSTALLED_APPS = [
     'app_load.apps.App_loadConfig',
     'app_load_multiple.apps.AppLoadMultipleConfig',
     'app_store.apps.AppStoreConfig',
-    "crispy_forms", 
-    "crispy_bootstrap4", 
+    "crispy_forms",
+    "crispy_bootstrap4",
 
 ]
 
@@ -65,7 +65,9 @@ ROOT_URLCONF = 'Novokosulino.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -142,5 +144,5 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
- 
-CRISPY_TEMPLATE_PACK = "bootstrap4" 
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
