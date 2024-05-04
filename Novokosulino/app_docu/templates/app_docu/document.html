@@ -3,18 +3,43 @@
 <title>{{title}}</title>
 
 <div class="container my-5">
-  <div class="display-6">{{document.title}}</div>
-  <!-- -------------------- -->
+  <!-- ------------- если текстовое описание -------------- -->
 
+  {% if document.content%}
+  <div class="display-6">{{document.title}}</div>
   <center>
     <div class="my-5">
       <img
         class="border border-info border-2"
-        src="{{document.file_docu}}"
-        alt="document"
+        src="{{document.icon.url}}"
+        alt="document icon"
       />
     </div>
   </center>
+  <div class="">
+    {% autoescape off %}
+    <p>{{document.content}}</p>
+    {%endautoescape%}
+  </div>
+  <!-- ------------- если файл для загрузки ---------------- -->
+  {% else %}
+  <center>
+    <div class="display-6">{{document.title}}</div>
+    <div class="my-5">
+      <img
+        class="border border-info border-2"
+        src="{{document.icon.url}}"
+        alt="document icon"
+      />
+    </div>
+    <a
+      href="{{document.file_docu.url}}"
+      download="{{document.file_docu.url}}"
+      class="download-link fs-3"
+      >Загрузить себе</a
+    >
+  </center>
+  {% endif %}
 </div>
 
 {% endblock content %}

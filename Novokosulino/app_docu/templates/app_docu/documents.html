@@ -7,7 +7,7 @@
   <div class="card shadow-lg my-5 mx-auto" style="max-width: 900px">
     <div class="row g-0">
       <a
-        href="{% url 'under_construction' %}"
+        href="{% url 'document' post.id %}"
         class="col-md-4 col-lg-3 d-flex d-md-inline-flex justify-content-center justify-content-md-start"
       >
         <img
@@ -19,10 +19,18 @@
       </a>
       <div class="col-md-8 col-lg-9">
         <div class="card-body">
+          <p class="card-text text-end">
+            <small class="text-body-secondary"
+              ><i>Категория: <b>{{post.cat}}</b></i></small
+            >
+          </p>
           <h4 class="card-title">{{post.title}}</h4>
+
+          {% if post.date %}
           <p class="card-text">
             <small class="text-body-secondary">{{post.date}}</small>
           </p>
+          {% endif %} {% if post.file_docu %}
           <p class="card-text">
             Ниже по ссылке вы можете загрузить файл в формате PDF на своё
             устройство.
@@ -33,6 +41,17 @@
             class="download-link fs-3"
             >Загрузить себе</a
           >
+          {% endif %}
+          <!-- ---------------------------- -->
+          {% if post.content %} {% autoescape off %}
+          <p>{{post.content|truncatewords:10}}</p>
+          {%endautoescape%}
+          <div class="d-flex justify-content-center">
+            <a href="{% url 'document' post.id %}" class="btn btn-secondary"
+              >Подробнее</a
+            >
+          </div>
+          {% endif %}
         </div>
       </div>
     </div>
