@@ -2,7 +2,7 @@
 
 <title>{{title}}</title>
 
-<div class="container my-5">
+<div class="container my-3">
   <!-- ------------- если текстовое описание -------------- -->
 
   {% if document.content%}
@@ -23,6 +23,17 @@
   </div>
   <!-- ------------- если файл для загрузки ---------------- -->
   {% else %}
+  <div class="display-6 mb-4">{{document.title}}</div>
+  <div class="ratio ratio-1x1">
+    <iframe
+      src="{{document.file_docu.url}}#view=FitH"
+      title="PDF document"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  {% comment %}
   <center>
     <div class="display-6">{{document.title}}</div>
     <div class="my-5">
@@ -39,7 +50,7 @@
       >Загрузить себе</a
     >
   </center>
-  {% endif %}
+  {% endcomment %} {% endif %}
 </div>
 
 {% endblock content %}

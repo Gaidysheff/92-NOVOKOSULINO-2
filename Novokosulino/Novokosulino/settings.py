@@ -45,9 +45,6 @@ INSTALLED_APPS = [
     'app_load.apps.App_loadConfig',
     'app_load_multiple.apps.AppLoadMultipleConfig',
     'app_store.apps.AppStoreConfig',
-    "crispy_forms",
-    "crispy_bootstrap4",
-
 ]
 
 MIDDLEWARE = [
@@ -143,6 +140,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
-
-CRISPY_TEMPLATE_PACK = "bootstrap4"
+# iframe
+X_FRAME_OPTIONS = 'SAMEORIGIN'
