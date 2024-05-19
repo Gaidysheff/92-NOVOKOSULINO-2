@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import NovokosulinoArchive
+from .models import NovokosulinoArchive, NY2024
 from django.utils.safestring import mark_safe
 
 
@@ -20,3 +20,6 @@ class NovokosulinoArchiveAdmin(admin.ModelAdmin):
             return mark_safe(f'<img src="{object.uploadedImage.url}" width=70')
 
     get_html_image.short_description = "Миниатюра"
+
+
+admin.site.register(NY2024)

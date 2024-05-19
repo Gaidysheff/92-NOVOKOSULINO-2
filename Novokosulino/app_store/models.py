@@ -37,7 +37,7 @@ class NovokosulinoArchive(models.Model):
 class NY2024(models.Model):
 
     uploadedImage = models.ImageField(
-        upload_to="NY2024/", verbose_name='Файл')
+        upload_to="archive/NY2024/", verbose_name='Файл')
 
     class Meta:
         verbose_name = 'Новый Год 2024'

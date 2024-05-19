@@ -1,0 +1,39 @@
+{% extends "app_core/base.html" %} {% load static %} {% block content %}
+
+<center>
+  <section class="py-2">
+    <div class="container mt-5">
+      <div class="display-1" style="text-shadow: 5px 5px 10px #0a0002">
+        {{title}}
+      </div>
+      <hr />
+      <div class="row g-2 g-lg-4 row-cols-1 row-cols-md-2 row-cols-lg-3 my-3">
+        {% for photo in photos %}
+        <div class="col mb-5">
+          <div class="card shadow-lg h-100">
+            <div
+              class="d-flex justify-content-center overflow-hidden"
+              style="height: 300px"
+            >
+              <a href="{% url 'image_from_ny2024' photo.id %}" target="_blank">
+                <img
+                  class=""
+                  style="height: 100%; width: auto"
+                  src="{{ photo.uploadedImage.url }}"
+                  alt="image for news"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</center>
+
+{% comment %} ============= Returning Button ================= {% endcomment %}
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Наверх</button>
+
+{% endblock content %}
