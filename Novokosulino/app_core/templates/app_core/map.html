@@ -1,0 +1,23 @@
+{% extends 'app_core/base.html' %} {% load static %}{% block content %}
+<title>{{title}}</title>
+
+<!-- Content Row -->
+<div class="container">
+  <center>
+    <h1 class="mt-4 text-muted">
+      Административная карта посёлка "Новокосулино-2"
+    </h1>
+    <h4 class="mb-4 text-muted">
+      на основе публичной кадастровой карты<br />
+      на 30 марта 2024 г.
+    </h4>
+  </center>
+</div>
+<img
+  src="{% static 'app_core/img/map.png' %}"
+  class="px-4"
+  style="width: 100%; height: auto"
+  alt="карта посёлка"
+/>
+
+{% endblock content %}

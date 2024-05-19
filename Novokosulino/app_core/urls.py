@@ -8,6 +8,7 @@ urlpatterns = [
     path('', index, name='home'),
     path('tables/', tables, name='tables'),
     path('charts/', charts, name='charts'),
+    path('map/', map, name='map'),
     path('management/', management, name='management'),
     path('under_construction/', under_construction, name='under_construction'),
 ]

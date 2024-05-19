@@ -27,6 +27,10 @@ def charts(request):
     return render(request, "app_core/charts.html", {'menu': menu, 'title': 'Графики'})
 
 
+def map(request):
+    return render(request, "app_core/map.html", {'menu': menu, 'title': 'Карта посёлка'})
+
+
 def charts_test(request):
     return render(request, "app_core/charts_test.html", {'menu': menu, 'title': 'Графики_TEST'})
 
