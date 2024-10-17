@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.conf import settings
 from app_news.models import Post
+from app_core.models import Achievements
 
 
 menu = ['на Главную страницу', 'Графики', 'Таблицы']
@@ -13,6 +14,26 @@ def index(request):
         'title': 'Главная страница',
     }
     return render(request, "app_core/index.html", context)
+
+
+def achievements(request):
+    achieve2024 = Achievements.objects.filter(year='2024').order_by("date")
+
+    context = {
+        'achievements2024': achieve2024,
+        'title': 'Проведённые мероприятия',
+    }
+    return render(request, "app_core/achievements.html", context)
+
+
+def achieve(request, pk):
+    post = Achievements.objects.get(id=pk)
+    image = post.image
+    context = {
+        'image': image,
+        'title': 'Фото из архива',
+    }
+    return render(request, "app_core/achieve.html", context)
 
 
 def management(request):

@@ -10,6 +10,8 @@ urlpatterns = [
     path('charts/', charts, name='charts'),
     path('map/', map, name='map'),
     path('management/', management, name='management'),
+    path('achievements/', achievements, name='achievements'),
+    path('achieve/<int:pk>/', achieve, name='achieve'),
     path('under_construction/', under_construction, name='under_construction'),
 ]
 
