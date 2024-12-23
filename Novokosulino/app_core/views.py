@@ -48,6 +48,10 @@ def charts(request):
     return render(request, "app_core/charts.html", {'menu': menu, 'title': 'Графики'})
 
 
+def vote2024(request):
+    return render(request, "app_core/vote2024.html", {'menu': menu, 'title': 'Голосование в 2024 г.'})
+
+
 def map(request):
     return render(request, "app_core/map.html", {'menu': menu, 'title': 'Карта посёлка'})
 

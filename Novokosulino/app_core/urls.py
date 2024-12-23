@@ -8,6 +8,7 @@ urlpatterns = [
     path('', index, name='home'),
     path('tables/', tables, name='tables'),
     path('charts/', charts, name='charts'),
+    path('vote2024/', vote2024, name='vote2024'),
     path('map/', map, name='map'),
     path('management/', management, name='management'),
     path('achievements/', achievements, name='achievements'),
