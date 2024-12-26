@@ -1,0 +1,74 @@
+{% extends "app_core/base.html" %} {% load static %} {% block content %}
+
+<title>{{title}}</title>
+<div class="container-lg">
+  <div class="row mt-3">
+    <h1 class="text-center mt-5">Председатель Правления ТСН</h1>
+    <div class="col-3"></div>
+    <div class="col-6">
+      <div class="card px-1 shadow text-center">
+        <div class="m-3">
+          <img src="{% static 'app_core/img/management/OlgaVarovina-500.png' %}" alt="фото Варовиной"  style="filter: grayscale(0.2); width: 100%; height: auto;"/>
+        </div>
+        <h5 class="mb-3 fst-italic text-muted member">
+          <span class="text-decoration-underline text-uppercase">Варовина </span><span class="text-decoration-underline">Ольга Игоревна</span> </span><br />
+          ул. Отдыха д. 8
+        </h5>
+      </div>
+    </div>
+    <div class="col-3"></div>
+  </div>
+  <div class="row mt-5">
+    <h1 class="text-center mb-3">Правление ТСН</h1>
+    <div class="col-6">
+      <div class="card px-1 shadow text-center">
+        <div class="m-3">
+          <img src="{% static 'app_core/img/management/EugeneShmakov-500.png' %}" alt="фото Шмакова"  style="filter: grayscale(0); width: 100%; height: auto;"/>
+        </div>
+        <h5 class="mb-3 fst-italic text-muted member">
+          <span class="text-decoration-underline text-uppercase">Шмаков </span><span class="text-decoration-underline">Евгений Владимирович</span> </span><br />
+          ул. Раздольная д. 15
+        </h5>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="card px-1 shadow text-center">
+        <div class="m-3">
+          <img src="{% static 'app_core/img/management/EugeneGaidyshev-500.png' %}" alt="фото Гайдышева" style="filter: grayscale(0); width: 100%; height: auto;"/>
+        </div>
+        <h5 class="mb-3 fst-italic text-muted member">
+          <span class="text-decoration-underline text-uppercase">Гайдышев </span><span class="text-decoration-underline">Евгений Геннадьевич</span> </span><br />
+          ул. Раздольная д. 19
+        </h5>
+      </div>
+    </div>
+  </div>
+  <div class="row my-5">
+    <h1 class="text-center mb-3">Ревизионная комиссия ТСН</h1>
+    <div class="col-6">
+      <div class="card px-1 shadow text-center">
+        <div class="m-3">
+          <img src="{% static 'app_core/img/management/IrinaKovaleva-500.png' %}" alt="фото Ковалёвой"  style="filter: grayscale(0); width: 100%; height: auto;"/>
+        </div>
+        <h5 class="mb-3 fst-italic text-muted member">
+          <span class="text-decoration-underline text-uppercase">Ковалева </span><span class="text-decoration-underline">Ирина Юрьевна</span> </span><br />
+          ул. Раздольная д. 21
+        </h5>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="card px-1 shadow text-center">
+        <div class="m-3">
+          <img src="{% static 'app_core/img/management/faceless.png' %}" alt="фото Шварц"  style="width: 100%; height: auto;"/>
+        </div>
+        <h5 class="mb-3 fst-italic text-muted member">
+          <span class="text-decoration-underline text-uppercase">Шварц </span><span class="text-decoration-underline">Алиса Александровна</span> </span><br />
+          ул. Отдыха д. 13
+        </h5>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+{% endblock content %}

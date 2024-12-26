@@ -49,6 +49,7 @@
     <title>{{ title }}</title>
   </head>
   <body>
+    <!-- <nav class="navbar navbar-expand-lg px-3" style="background: teal"> -->
     <nav class="navbar navbar-expand-lg px-3 navbar-dark bg-dark">
       <div class="container-lg">
         <a class="navbar-brand" href="{% url 'home' %}">
@@ -100,17 +101,15 @@
                       <span>▸</span>
                     </button>
                     <div class="dropright-content">
-                      <a href="{% url 'ny2024' %}">
-                        <button>Новый Год 2024 г.</button>
-                      </a>
-
+                      <a href="{% url 'ny2025' %}"
+                        ><button>Новый Год 2025 г.</button></a
+                      >
                       <a href="{% url 'maslenitsa2024' %}"
                         ><button>Масляница 2024г.</button></a
                       >
-
-                      <a href="{% url 'under_construction' %}"
-                        ><button>Новый Год 2025 г.</button></a
-                      >
+                      <a href="{% url 'ny2024' %}">
+                        <button>Новый Год 2024 г.</button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -131,14 +130,14 @@
                       <span>▸</span>
                     </button>
                     <div class="dropright-content">
-                      <a href="{% url 'management' %}"
+                      <a href="{% url 'management_2024_3' %}"
+                        ><button>с 04.12.24</button></a
+                      >
+                      <a href="{% url 'management_2024_2' %}">
+                        <button>01.07.24 - 04.12.24</button></a
+                      >
+                      <a href="{% url 'management_2024_1' %}"
                         ><button>27.10.23 - 01.07.24</button></a
-                      >
-                      <a href="{% url 'under_construction' %}">
-                        <button>01.07.24 - 01.12.24</button></a
-                      >
-                      <a href="{% url 'under_construction' %}"
-                        ><button>с 01.12.24</button></a
                       >
                     </div>
                   </div>
@@ -149,11 +148,11 @@
                       <span>▸</span>
                     </button>
                     <div class="dropright-content">
-                      <a href="{% url 'charts' %}"
-                        ><button>27 октября 2023 г.</button></a
-                      >
                       <a href="{% url 'vote2024' %}"
                         ><button>23 ноября 2024 г.</button></a
+                      >
+                      <a href="{% url 'charts' %}"
+                        ><button>27 октября 2023 г.</button></a
                       >
                     </div>
                   </div>
@@ -167,9 +166,9 @@
                       <a href="{% url 'achievements' %}"
                         ><button>за 2024 г.</button></a
                       >
-                      <a href="{% url 'under_construction' %}"
+                      <!-- <a href="{% url 'under_construction' %}"
                         ><button>за 2025 г.</button></a
-                      >
+                      > -->
                     </div>
                   </div>
                 </div>
@@ -329,7 +328,7 @@
                 <li>
                   <a
                     class="dropdown-item text-success"
-                    href="{% url 'management' %}"
+                    href="{% url 'management_2024_1' %}"
                     >Структура Правления</a
                   >
                 </li>
@@ -413,8 +412,7 @@
       </div>
     </nav> -->
 
-    <!-- =====================================
-  -->
+    <!-- ===================================== -->
     {% block content %} {% endblock content %}
   </body>
   <script

@@ -52,3 +52,13 @@ class Maslenitsa2024(models.Model):
     class Meta:
         verbose_name = 'Масленица 2024'
         verbose_name_plural = 'Масленица 2024'
+
+
+class NY2025(models.Model):
+
+    uploadedImage = models.ImageField(
+        upload_to="archive/NY2025/", verbose_name='Файл')
+
+    class Meta:
+        verbose_name = 'Новый Год 2025'
+        verbose_name_plural = 'Новый Год 2025'

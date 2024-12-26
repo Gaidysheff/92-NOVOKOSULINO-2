@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import NovokosulinoArchive, NY2024, Maslenitsa2024
+from .models import NovokosulinoArchive, NY2024, Maslenitsa2024, NY2025
 from django.utils.safestring import mark_safe
 
 
@@ -24,3 +24,4 @@ class NovokosulinoArchiveAdmin(admin.ModelAdmin):
 
 admin.site.register(NY2024)
 admin.site.register(Maslenitsa2024)
+admin.site.register(NY2025)

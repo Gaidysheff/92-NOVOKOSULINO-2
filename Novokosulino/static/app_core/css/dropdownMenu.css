@@ -1,0 +1,133 @@
+.header {
+  padding: 5px;
+  background-color: #24262d;
+  box-shadow: 14px 14px 14px #00000033;
+  /* width: 400px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 5px;
+  /* width: 100%; */
+}
+
+.dropdown-content button {
+  width: 200px;
+  /* width: 100%; */
+  font-size: 14px;
+  color: #24262d;
+  padding: 2px 8px;
+  border: none;
+  background-color: transparent;
+  border-radius: 4px;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+/* .dropright-content,
+.dropright-content button {
+  width: 100%;
+} */
+
+.dropright.active > button,
+.dropdown-content button:hover {
+  background-color: #ffe391;
+}
+
+.dropdown-content .line {
+  width: 100%;
+  border-bottom: 1px solid #3838385f;
+  margin: 3px 0;
+}
+
+.dropdown-btn {
+  border: none;
+  background-color: transparent;
+  color: #ffecb3;
+  padding: 3px 8px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.dropdown-btn:hover {
+  background-color: #666666;
+  color: #ffffff;
+}
+
+.dropright-content,
+.dropdown-content {
+  box-shadow: 7px 7px 14px #aea07a;
+  position: absolute;
+  pointer-events: none;
+  transition: 0.3s;
+  opacity: 0;
+
+  padding: 6px;
+  border-radius: 6px;
+  background-color: #ffecb3;
+  margin-top: 100px;
+
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.dropdown.active .dropdown-btn {
+  background-color: #ffecb3;
+  color: #24262d;
+}
+.dropdown.active .dropdown-content {
+  pointer-events: all;
+  margin-top: 7px;
+  opacity: 1;
+}
+.dropdown.active .dropright-content {
+  top: -6px;
+}
+
+.dropright {
+  position: relative;
+  width: 100%;
+}
+
+.dropright-content {
+  background-color: #ffecb3;
+  left: calc(100% + 100px);
+  top: -100px;
+  margin: 0;
+}
+
+.dropright.active .dropright-content {
+  left: calc(100% + 9px);
+  pointer-events: all;
+  opacity: 1;
+}
+
+.shortcut {
+  opacity: 0.5;
+}
+
+/* ========================= MEDIA ======================== */
+/* ================== LG 992 (burger) =================== */
+
+@media (max-width: 992px) {
+  .header {
+    flex-direction: column;
+    align-self: start;
+  }
+
+  .dropdown {
+    align-self: start;
+  }
+
+  .dropright {
+    width: 20%;
+  }
+
+  .dropright.active .dropright-content {
+    /* left: -10px; */
+    top: 25px;
+  }
+}

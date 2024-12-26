@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import NovokosulinoArchive, NY2024, Maslenitsa2024
+from .models import NovokosulinoArchive, NY2024, Maslenitsa2024, NY2025
 
 
 def archive(request):
@@ -82,3 +82,22 @@ def maslenitsa2024Post(request, pk):
         'title': 'Фото c празднования Масленицы - 2024 г.',
     }
     return render(request, "app_store/maslenitsa2024_post.html", context)
+
+
+def ny2025(request):
+    photos = NY2025.objects.all()
+    context = {
+        'photos': photos,
+        'title': 'Празднование Нового 2025 Года',
+    }
+    return render(request, "app_store/ny2025_index.html", context)
+
+
+def ny2025Post(request, pk):
+    post = NY2025.objects.get(id=pk)
+    image = post.uploadedImage
+    context = {
+        'image': image,
+        'title': 'Фото c празднования Нового 2025 Года',
+    }
+    return render(request, "app_store/ny2025_post.html", context)

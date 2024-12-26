@@ -9,6 +9,8 @@ urlpatterns = [
          storeNovokosulinoPost, name='image_from_village'),
     path('ny2024/', ny2024, name='ny2024'),
     path('ny2024/<int:pk>/', ny2024Post, name='image_from_ny2024'),
+    path('ny2025/', ny2025, name='ny2025'),
+    path('ny2025/<int:pk>/', ny2025Post, name='image_from_ny2025'),
     path('maslenitsa2024/', maslenitsa2024, name='maslenitsa2024'),
     path(
         'maslenitsa2024/<int:pk>/',

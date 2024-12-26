@@ -36,8 +36,28 @@ def achieve(request, pk):
     return render(request, "app_core/achieve.html", context)
 
 
-def management(request):
-    return render(request, "app_core/management.html", {'menu': menu, 'title': 'Правление ТСН'})
+def management_2024_1(request):
+    context = {
+        'menu': menu,
+        'title': 'Правление ТСН 27.10.23 - 01.07.24 г.'
+    }
+    return render(request, "app_core/management_2024_1.html", context)
+
+
+def management_2024_2(request):
+    context = {
+        'menu': menu,
+        'title': 'Правление ТСН  01.07.24 - 04.12.24 г.'
+    }
+    return render(request, "app_core/management_2024_2.html", context)
+
+
+def management_2024_3(request):
+    context = {
+        'menu': menu,
+        'title': 'Правление ТСН с 04.12.24 г.'
+    }
+    return render(request, "app_core/management_2024_3.html", context)
 
 
 def tables(request):

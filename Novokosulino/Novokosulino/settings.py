@@ -27,6 +27,7 @@ SECRET_KEY = 'django-insecure-e5kz_z1wg+-w378%0+7pbmu^j5w&_&x!1#ab(!9j!rd22rm%x=
 DEBUG = True
 
 ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ["новокосулино-2.рф", "www.новокосулино-2.рф", 'www.test.gaidysheff.ru', 'xn---2-dlcyjgleebbd9a2a.xn--p1ai', 'www.xn---2-dlcyjgleebbd9a2a.xn--p1ai']
 
 
 # Application definition
@@ -90,6 +91,22 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default':{
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'gaidys2d_novokos',
+#         'USER': 'gaidys2d_novokos',
+#         'PASSWORD': '9WmJpLS&BC6A',
+#         'HOST': 'localhost',
+#         'POST': '3306',
+#     },
+
+#     'OPTIONS': {
+#         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+#     },
+
+# }
 
 
 # Password validation

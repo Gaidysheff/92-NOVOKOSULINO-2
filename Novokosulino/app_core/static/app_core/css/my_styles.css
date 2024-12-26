@@ -20,7 +20,8 @@
 /* ======================= GOLDEN SIGN ========================== */
 
 .golden_container {
-  background: radial-gradient(ellipse at center, #443501 0%, #000000 100%);
+  /* background: radial-gradient(ellipse at center, #443501 0%, #000000 100%); */
+  background: radial-gradient(ellipse at center, #6dc264 0%, #196002 100%);
   height: 100%;
 }
 
@@ -106,7 +107,8 @@
   font-size: 1rem;
   border: none;
   outline: none;
-  background-color: red;
+  background-color: #196002;
+  /* background-color: red; */
   color: #ebe6d6;
   cursor: pointer;
   padding: 15px;
