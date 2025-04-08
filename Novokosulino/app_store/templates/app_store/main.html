@@ -15,7 +15,7 @@
       {{title}}
     </div>
   </div>
-
+  <!-- -------------------- История посёлка ------------------ -->
   <div class="card mb-5">
     <img
       src="{% static 'app_store/images/Novokosulino-green.png' %}"
@@ -30,41 +30,23 @@
       >
     </div>
   </div>
-
+  <!-- -------------------- Масленица 2025 ------------------ -->
   <div class="card mb-5">
     <img
-      src="{% static 'app_store/images/NY-2024.png' %}"
+      src="{% static 'app_store/images/Spring_celebration_2025.jpg' %}"
       class="card-img-top"
       alt="..."
     />
     <div class="card-body">
-      <h5 class="card-title">Празднование Нового 2024 Года</h5>
+      <h5 class="card-title">Празднование масленицы</h5>
+      <p class="card-text">Собраны фотографии о праздновании масленицы.</p>
       <p class="card-text">
-        Собраны фотографии о праздновании Нового 2024 Года.
+        <small class="text-body-secondary">2 марта 2025 г.</small>
       </p>
-      <p class="card-text">
-        <small class="text-body-secondary">17 декабря 2023 г.</small>
-      </p>
-      <a href="{% url 'ny2024' %}" class="btn btn-secondary">Перейти</a>
+      <a href="{% url 'maslenitsa2025' %}" class="btn btn-secondary">Перейти</a>
     </div>
   </div>
-
-  <div class="card mb-5">
-    <img
-      src="{% static 'app_store/images/Spring_celebration_2024.png' %}"
-      class="card-img-top"
-      alt="..."
-    />
-    <div class="card-body">
-      <h5 class="card-title">Празднование масляницы</h5>
-      <p class="card-text">Собраны фотографии о праздновании масляницы.</p>
-      <p class="card-text">
-        <small class="text-body-secondary">16 марта 2024 г.</small>
-      </p>
-      <a href="{% url 'maslenitsa2024' %}" class="btn btn-secondary">Перейти</a>
-    </div>
-  </div>
-
+  <!-- -------------------- Новый Год 2025 ------------------ -->
   <div class="card mb-5">
     <img
       src="{% static 'app_store/images/ny2025.png' %}"
@@ -80,6 +62,40 @@
         <small class="text-body-secondary">22 декабря 2024 г.</small>
       </p>
       <a href="{% url 'ny2025' %}" class="btn btn-secondary">Перейти</a>
+    </div>
+  </div>
+  <!-- -------------------- Масленица 2024 ------------------ -->
+  <div class="card mb-5">
+    <img
+      src="{% static 'app_store/images/Spring_celebration_2024.png' %}"
+      class="card-img-top"
+      alt="..."
+    />
+    <div class="card-body">
+      <h5 class="card-title">Празднование масленицы</h5>
+      <p class="card-text">Собраны фотографии о праздновании масленицы.</p>
+      <p class="card-text">
+        <small class="text-body-secondary">16 марта 2024 г.</small>
+      </p>
+      <a href="{% url 'maslenitsa2024' %}" class="btn btn-secondary">Перейти</a>
+    </div>
+  </div>
+  <!-- -------------------- Новый Год 2024 ------------------ -->
+  <div class="card mb-5">
+    <img
+      src="{% static 'app_store/images/NY-2024.png' %}"
+      class="card-img-top"
+      alt="..."
+    />
+    <div class="card-body">
+      <h5 class="card-title">Празднование Нового 2024 Года</h5>
+      <p class="card-text">
+        Собраны фотографии о праздновании Нового 2024 Года.
+      </p>
+      <p class="card-text">
+        <small class="text-body-secondary">17 декабря 2023 г.</small>
+      </p>
+      <a href="{% url 'ny2024' %}" class="btn btn-secondary">Перейти</a>
     </div>
   </div>
 </div>

@@ -6,7 +6,7 @@ import os
 
 
 def documents(request):
-    file = LoadedDocuments.objects.all()
+    file = LoadedDocuments.objects.all().order_by("-id")
 
     context = {
         "file": file,

@@ -17,4 +17,10 @@ urlpatterns = [
         maslenitsa2024Post,
         name='image_from_maslenitsa2024'
     ),
+    path('maslenitsa2025/', maslenitsa2025, name='maslenitsa2025'),
+    path(
+        'maslenitsa2025/<int:pk>/',
+        maslenitsa2025Post,
+        name='image_from_maslenitsa2025'
+    ),
 ]

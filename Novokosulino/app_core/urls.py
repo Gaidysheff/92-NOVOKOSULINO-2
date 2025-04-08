@@ -15,6 +15,8 @@ urlpatterns = [
     path('management_2024_3/', management_2024_3, name='management_2024_3'),
     path('achievements/', achievements, name='achievements'),
     path('achieve/<int:pk>/', achieve, name='achieve'),
+    path('achievements2025/', achievements2025, name='achievements2025'),
+    path('achieve2025/<int:pk>/', achieve2025, name='achieve2025'),
     path('under_construction/', under_construction, name='under_construction'),
 ]
 

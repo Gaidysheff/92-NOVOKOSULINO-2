@@ -25,7 +25,7 @@ class Achievements(models.Model):
         verbose_name_plural = 'Проведённые мероприятия'
 
     def __str__(self):
-        return self.text
+        return f"{self.text[:5]}..."
 
     def get_absolute_url(self):
         return reverse('achive', kwargs={'achive_id': self.pk})

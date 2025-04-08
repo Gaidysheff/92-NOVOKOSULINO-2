@@ -16,12 +16,13 @@ def index(request):
     return render(request, "app_core/index.html", context)
 
 
+# =======================================================
 def achievements(request):
     achieve2024 = Achievements.objects.filter(year='2024').order_by("date")
 
     context = {
         'achievements2024': achieve2024,
-        'title': 'Проведённые мероприятия',
+        'title': 'Проведённые мероприятия в 2024 г.',
     }
     return render(request, "app_core/achievements.html", context)
 
@@ -34,6 +35,30 @@ def achieve(request, pk):
         'title': 'Фото из архива',
     }
     return render(request, "app_core/achieve.html", context)
+
+
+# =======================================================
+
+def achievements2025(request):
+    achieve2025 = Achievements.objects.filter(year='2025').order_by("date")
+
+    context = {
+        'achievements2025': achieve2025,
+        'title': 'Проведённые мероприятия в 2025 г.',
+    }
+    return render(request, "app_core/achievements2025.html", context)
+
+
+def achieve2025(request, pk):
+    post = Achievements.objects.get(id=pk)
+    image = post.image
+    context = {
+        'image': image,
+        'title': 'Фото из архива',
+    }
+    return render(request, "app_core/achieve.html", context)
+
+# =======================================================
 
 
 def management_2024_1(request):
